@@ -1,0 +1,10 @@
+name: build-test
+on:
+  push
+jobs:
+  build:
+    # Importing a reusable workflow from another repository and branch
+    uses: jnikhilplr/action-templates/.github/workflows/java-build-test.yml@main
+    # Passing 'node-version' as an input parameter to the reusable workflow
+    with:
+      java-version: '17'
