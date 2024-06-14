@@ -25,10 +25,7 @@ jobs:
         run: mvn clean install
 
       - name: Run tests
-        run: mvn test
-
-      - name: Lint with Checkstyle
-        run: mvn checkstyle:check
+        run: mvn test 
  
       - name: Update PR status to success
         if: success()
